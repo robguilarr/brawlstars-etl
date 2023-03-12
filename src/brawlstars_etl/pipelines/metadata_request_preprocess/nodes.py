@@ -28,7 +28,7 @@ import pyspark.sql.types as t
 
 def players_info_request(player_tags_txt: str,
                          parameters : Dict
-) -> pd.DataFrame:
+) -> pyspark.sql.DataFrame:
     '''
     Extracts Players metadata from Brawlstars API by executing an Async Event Loop over a list of futures objects.
     These are made of task objects built of Async threads due blocking call limitations of api_request sub_module.
